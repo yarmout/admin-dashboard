@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    height: 100vh;
+
+    grid-template-areas:
+    "sidebar header"
+    "sidebar main-content"
+}
+
+/* HEADER LAYOUT */
+.header {
+    grid-area: header;
+    display: grid;
+    gap: 15px;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .15), inset 0 3px 8px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 1;
+}
+
+.search-and-profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.welcome-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.header-buttons {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 35px;
+}
+
+.profile-link,
+.header-buttons {
+    justify-self: end;
+    padding-right: 100px;
+}
+
+/* SIDEBAR LAYOUT */
+.sidebar {
+    grid-area: sidebar;
+    display: grid;
+    align-content: start;
+    grid-template-rows: auto auto auto;
+    row-gap: 25px;
+    padding: 25px;
+    background-color: rgb(21, 133, 203);
+    color: white;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15), inset 3px 0 8px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 1;
+}
+
+/* MAIN CONTENT LAYOUT */
+.main-content {
+    grid-area: main-content;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: rgb(222, 228, 237);
+    padding-top: 12px;
+
+    grid-template-areas:
+    "projects announcements"
+    "projects trending"
+}
+
+.projects {
+    grid-area: projects;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
+}
+
+/* PROJECTS LAYOUT */
+.projects-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 24px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.projects-header,
+.announcements-header,
+.trending-header {
+    margin-bottom: 16px;
+}
+
+/* ANNOUNCEMENTS & TRENDING STYLING  */
+.announcement-container,
+.trending-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.announcements,
+.trending {
+    margin-right: 26px;
+    margin-bottom: 26px;
+}
