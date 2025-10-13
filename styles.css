@@ -63,6 +63,26 @@ body {
     z-index: 1;
 }
 
+.sidebar-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.sidebar-title .material-icons {
+    font-size: 28px;
+}
+
+.side-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
 /* MAIN CONTENT LAYOUT */
 .main-content {
     grid-area: main-content;
